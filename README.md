@@ -17,7 +17,10 @@ Step 3: Once, download is complete type "vagrant ssh" in order to login into lin
 Step 4. Now clone the github repository https://github.com/LokeshDK/Log_Analysis in catalog folder inside vagarant folder
 Step 5. In Terminal, type "cd vagarant/"
 Step 6. In terminal, type "cd catalog/"
-Step 7. In terminal, type "ls" and make sure newsdata.py file is appearing. If not download the files from repository mentioned in step 4 and paste it in catalog folder.
+Step 7. In terminal, type "cd Log_Analysis"
+Step 8. In terminal, type "ls" and make sure newsdata.py file is appearing. If not download the files from repository mentioned in step 4 and paste it in catalog folder.
 Step 8. Type "python3 newsdata.py"
 
 You get the desired result in the sequence once the execution is completed.
+
+Note: SQL view has already been added in the code. Therefore it is not required to add initially. Once the execution complete view is dropped.
