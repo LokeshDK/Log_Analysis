@@ -8,7 +8,6 @@ DBNAME = "news"
 def top_viewed_article():
     # Connect to Database
     db = psycopg2.connect(database=DBNAME)
-    print("connected to db")
     c = db.cursor()
     # Execute SQL Query
     c.execute("SELECT DISTINCT articles.title, views FROM articles, " +
@@ -32,14 +31,12 @@ def top_viewed_article():
 
     # Close DB COnnection
     db.close()
-    print("\nConnection to db has been closed")
 
 
 # Define new method for getting Query 2: Top Author name and their total views
 def top_authors():
     # Connect to Dtabase
     db = psycopg2.connect(database=DBNAME)
-    print("connected to db")
     c = db.cursor()
     # Execute SQL Query o cretae view to get list of top viwed article
     c.execute("CREATE VIEW top_views AS SELECT DISTINCT articles.title, " +
@@ -75,15 +72,12 @@ def top_authors():
     c.execute("DROP VIEW top_views")
     # Close DB COnnection
     db.close()
-    print("\nVIEW DROPPED!!!! ")
-    print("connection to db has been closed")
 
 
 # define new funtion for getting Query 3: Day where most error has occured
 def error_days():
     # Connect to Dtabase
     db = psycopg2.connect(database=DBNAME)
-    print("connected to db")
     c = db.cursor()
     # Execute SQL Query
     c.execute("select to_char(time, 'FMDD-FMMonth, YYYY') as day, " +
@@ -104,7 +98,7 @@ def error_days():
 
     # Close DB COnnection
     db.close()
-    print("\nconnection to db has been closed")
+
 
 # Mail function to call all methods
 if __name__ == '__main__':
