@@ -32,7 +32,7 @@ def top_viewed_article():
 
     # Close DB COnnection
     db.close()
-    print("\n Connection to db has been closed")
+    print("\nConnection to db has been closed")
 
 
 # Define new method for getting Query 2: Top Author name and their total views
@@ -64,7 +64,7 @@ def top_authors():
 
     # Get the table data in a variable
     article_list = c.fetchall()
-    print("\n Query 2 RESULT: Who are the most popular " +
+    print("\nQuery 2 RESULT: Who are the most popular " +
           "article authors of all time?")
     # print all the values in iteration
     for top_view in article_list:
@@ -75,7 +75,7 @@ def top_authors():
     c.execute("DROP VIEW top_views")
     # Close DB COnnection
     db.close()
-    print("\n VIEW DROPPED!!!! ")
+    print("\nVIEW DROPPED!!!! ")
     print("connection to db has been closed")
 
 
@@ -94,7 +94,7 @@ def error_days():
 
     # Get the table data in a variable
     article_list = c.fetchall()
-    print("\n Query 3 RESULT: On which days did more than 1% of " +
+    print("\nQuery 3 RESULT: On which days did more than 1% of " +
           "requests lead to errors?")
     # print all the values in iteration
     for top_article in article_list:
@@ -104,7 +104,7 @@ def error_days():
 
     # Close DB COnnection
     db.close()
-    print("\n connection to db has been closed")
+    print("\nconnection to db has been closed")
 
 # Mail function to call all methods
 if __name__ == '__main__':
