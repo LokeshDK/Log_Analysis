@@ -11,14 +11,14 @@ Terminal (Git Bash if you are using windows/Terminal if you are using Mac/Linux)
 
 **Pre-Requisite**: Install Vagrant 1.9.2 or higher and Oracle VirtualBox 4.3.0 or higher in your machine before accessing through git hub.
 
-1. Type "vagrant up" into the terminal and wait for vagrant to download all necessary data and create virtual machine on your system. (It will take time depending on your internet connection.)
+1. Type `vagrant up` into the terminal and wait for vagrant to download all necessary data and create virtual machine on your system. (It will take time depending on your internet connection.)
 2. Once, download is complete type "vagrant ssh" in order to login into linux.
-3. In Terminal, type "cd vagarant/"
-4. In terminal, type "cd catalog/"
-5. In terminal, type "ls" and make sure newsdata.py file is appearing. If not download the files from repository mentioned in step 4 and paste it in catalog folder.
-6. Extract newsdata.zip and use the command "psql -d news -f newsdata.sql" in terminal.
+3. In Terminal, type `cd vagarant/`
+4. In terminal, type `cd catalog/`
+5. In terminal, type `ls` and make sure newsdata.py file is appearing. If not download the files from repository mentioned in step 4 and paste it in catalog folder.
+6. Extract newsdata.zip and use the command `psql -d news -f newsdata.sql` in terminal.
 7. After db been configured press ctrl + c to quit sql.
-8. Type "python3 newsdata.py".
+8. Type `python3 newsdata.py`.
 
 You get the desired result in the sequence once the execution is completed.
 
