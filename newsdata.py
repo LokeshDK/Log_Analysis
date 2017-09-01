@@ -50,13 +50,13 @@ def top_authors():
 def error_days():
     """ define new funtion for getting Query 3: Day where most error has occured """
     # Execute SQL Query
-    execute_query("""select to_char(time, 'FMDD-FMMonth, YYYY') as day, 
-                  round(count(*) * 100.0 / (select count(*) from log 
-                  where path != '/') * 100,2) as percentage from log 
-                  where path != '/' and status != '200 OK' group by day 
-                  order by percentage desc LIMIT 1;""",
-                  "\nQuery 3 RESULT: On which days did more than 1% of " +
-                  "requests lead to errors?")
+    execute_query("""SELECT * FROM (SELECT error_day.day,
+                    ROUND(SUM(error_day.status_count) / SUM(total_request.status_count) * 100, 2) AS percent
+                    FROM error_day INNER JOIN total_request ON 
+                    error_day.day = total_request.day GROUP BY error_day.day,
+                    total_request.status_count ORDER BY percent DESC) AS t1 WHERE t1.percent > 1;""",
+                    "\nQuery 3 RESULT: On which days did more than 1% of " +
+                    "requests lead to errors?")
 
 
 # Mail function to call all methods
