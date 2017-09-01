@@ -25,5 +25,3 @@ folder.)
 9. Once views has been created, then type `python3 newsdata.py`.
 
 You get the desired result in the sequence once the execution is completed.
-
-**Note**: SQL view has already been added in the code. Therefore it is not required to add initially. Once the execution complete view is dropped.
